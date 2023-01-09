@@ -1,0 +1,23 @@
+/*
+=============================================================================================
+=========================== MAIN - CARDAPIO
+=============================================================================================
+*/
+
+/*
+banner da pagina do cardapio
+*/
+.bannerCardapio {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.bannerCardapio img {
+    width: 100%;
+}
+
+.gamb {
+    width: 500px;
+    height: 50px;
+}

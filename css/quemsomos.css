@@ -1,0 +1,57 @@
+/*
+=============================================================================================
+=========================== MAIN - QUEM SOMOS
+=============================================================================================
+*/
+
+.main-quemsomos {
+    display: flex;
+}
+
+.quemsomos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;  
+    align-items: center;  
+    width: 100vw;
+    margin-bottom: 50px;
+}
+
+.quemsomos-itens-texto {
+    color: var(--colorTextoEscuro);
+    width: 48vw;
+    min-width: 360px;
+    padding: 20px;
+}
+
+.quemsomos-itens-texto p,li {
+    font-size: 1em;
+}
+
+.quemsomos-itens-texto h1,h3{
+    padding: 15px;
+    padding-left: 0;
+}
+
+.quemsomos-itens-img{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-radius: 10px;
+    width: 48vw;
+    min-width: 360px;
+    min-height: 400px;
+    padding: 20px;
+}
+
+.quemsomos-itens-img img{
+    width: 30vw;
+    border-radius: 10px;    
+    min-width: 350px;
+    min-height: 380px;
+    
+}
+
+.quemsomos-itens-img img:hover {
+    box-shadow: 0 4px 8px 0 var(--bgColorFormCopy), 0 6px 20px 0 #00000030;
+}

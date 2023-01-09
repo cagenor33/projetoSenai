@@ -1,0 +1,504 @@
+html {
+    font-size: 1em; /* Igual a 16px tamanho padrão da fonte nos navegadores 16px = 1em. São as recomendadas.*/
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    padding-top: 185px; /*inicio do main apos o header fixo*/
+
+    background-color: var(--bgColorMain);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;    
+	min-height: 100vh;
+}
+
+a,ul,li,p,h1,h2,h3,h4,h5,h6,input,label {
+    list-style: none;    
+    font-family: calibre, sans-serif;
+}
+
+:root {
+    /* Cores das fontes do site */
+    --colorTextoEscuro: #590d22;
+    --colorTextoClaro: #FFF0F3;
+    --colorTextoHover: #ff4d6d;
+    /* Cores dos backgrounds do site */
+    --bgColorFormCopy: #800F2F;
+    --bgColorMain: #FFF0F3;
+    --bgColorMainTitle: #ffeaf7;
+    --bgColorFooter: #FFB3C1;
+    --bgColorHeader: #FFCCD5;
+    --bgColorHamburger: #590D22;
+    /* Cores das bordas do site */
+    --colorBorder: #d3d0d0;
+}
+
+/*
+=============================================================================================
+=========================== HEADER - CABEÇALHO DO SITE
+=============================================================================================
+*/
+
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.menuSuperior {
+    background-color: var(--bgColorFormCopy);
+    display: flex;
+    width: 100%;
+}
+
+.menuSup-item {
+    color: var(--colorTextoClaro);
+    text-decoration: none;
+    padding: 5px 10px 5px 10px;   
+}
+
+.menuSup-item:hover {
+    color: var(--colorTextoHover);
+}
+
+.menuPrincipal {
+    background-color: var(--bgColorHeader);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0px 0px 0px 0px;
+    height: 140px;
+}
+
+.nav-menu,.nav-link  {
+    display: flex;
+    color: var(--colorTextoEscuro);
+    letter-spacing: 5px;
+    text-decoration: none;
+    gap: 100px;
+}
+
+.nav-menu .nav-link:hover {
+    color: var(--colorTextoHover);
+}
+
+#logo {
+    width: 125px;
+    height: 120px;
+    transition: 5s;
+}
+
+
+/*
+===========================@MEDIA QUERY - TABLET - HEADER
+*/
+
+/*
+===========================@MEDIA QUERY - SMARTPHONE - HEADER
+*/
+@media (max-width: 800px) {
+
+    .menuPrincipal {
+        padding: 5px;
+        text-align: center;
+    }
+
+    .nav-menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 60px;
+        letter-spacing: 2px;
+    }
+
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 36px;
+        gap: 0;
+        flex-direction: column;
+        background-color: var(--bgColorHamburger);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    .navbar {
+        min-height: 70px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 24px;
+    }
+
+    .nav-branding {
+        font-size: 2em;
+    }    
+
+    .nav-link {
+        transition: 0.7s ease;
+    }
+
+    .nav-link:hover {
+        color: var(--colorTextoHover);
+    }
+
+    .hamburger {
+        /*display: none;*/
+        cursor: pointer;
+        background-color: var(--bgColorHamburger);
+    }
+
+    .bar {
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        -webkit-transition: all 0.3s ease-in-out;
+        background-color: var(--bgColorHeader);
+    }
+
+    .bar:hover {
+        background-color: var(--bgColorFooter);
+    }
+
+    .hamburger{
+        display: block;
+    }
+
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-item {
+        margin: 16px 0;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    } 
+    
+    .nav-menu,.nav-link  {
+        color: var(--colorTextoClaro);
+    }
+}
+
+/*
+=============================================================================================
+=========================== MAIN - HOME
+=============================================================================================
+*/
+
+.main {
+    background-color: var(--bgColorMain);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+/*
+banner da pagina principal
+*/
+.banner {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#bannerSite {
+    width: 95vw;
+}
+
+.menuProdutos {
+    text-align: center;
+    color: var(--colorTextoEscuro);
+    background-color: var(--bgColorMainTitle);
+}
+
+.menuProdutos h1{
+    padding: 50px;
+}
+
+.menuProdutos-itens {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.menuProdutos-itens img {
+    display: block;
+    border: none;
+    border-radius: 10px;
+    width: 250px;
+    height: 312px;
+    min-width: 250px;
+    min-height: 312px;
+    margin-bottom: 20px;
+}
+
+.menuProdutos-itens img:hover {
+    box-shadow: 0 4px 8px 0 var(--bgColorFormCopy), 0 6px 20px 0 #00000030;
+}
+
+.menuProdutos-itens .prodItem {
+    display: block;
+    border: none;
+    border-radius: 200px;
+    width: 223px;
+    height: 220px;
+    min-width: 223px;
+    min-height: 220px;
+}
+
+/*
+Section do cadastro do email para feed
+*/
+
+.feedemail{
+    background-color: var(--bgColorFormCopy);
+    color: var(--colorTextoClaro);
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    margin-top: 50px;
+    padding-top: 10px;
+}
+
+.feedemail h2 {
+    font-size: 2.2em;
+}
+
+#email {   
+    border: none;
+    font-size: 1em;
+    border-radius: 10px;
+    width: 50vw;
+    min-width: 400px;
+    height: 40px;
+    padding-left: 10px;
+    margin-bottom: 16px;
+}
+
+#submit-button {
+    background-color: var(--colorTextoClaro);
+    color: var(--colorTextoEscuro);
+    border: none;
+    border-radius: 10px;
+    font-size: 1.5em;
+    width: 200px;
+    height: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+input:focus {
+	outline: none;
+	box-shadow: 0 0 0 2pt var(--bgColorHeader);
+}
+
+#submit-button:hover {
+    background-color: var(--colorTextoHover);
+}
+
+.showMessage {
+    box-shadow: 0 2px 4px 0 var(--colorTextoClaro);
+    background-color: var(--bgColorMain);
+    color: var(--colorTextoHover);
+}
+
+/*
+===========================@MEDIA QUERY - RESPONSIVE - HOME
+*/
+@media (max-width: 609px) {
+
+    .feedemail p{        
+        font-size: 1em;
+    }
+
+    .feedemail h2 {
+        font-size: 1.6em;
+    }
+
+    #btnEmail {
+        min-width: 150px;
+        font-size: 1.3em;
+    }    
+
+    #edtEmail {
+        min-width: 300px;
+    }
+}
+
+/*
+=============================================================================================
+=========================== FOOTER - RODAPÉ DO SITE
+=============================================================================================
+*/
+
+.footer {
+    background-color: var(--bgColorFooter);
+    color: var(--colorTextoEscuro);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%    
+}
+
+.rodape {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.rodape-quemsomos {
+    display: flex;
+    width: 33.33%; 
+    min-width: 333px;
+    padding: 20px;
+    border-right: 1px solid var(--colorBorder);
+}
+
+.rodape-quemsomos-itens {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.rodape-quemsomos-itens h3{
+    padding-bottom: 20px;
+}
+
+.rodape-quemsomos-itens a{
+    color: var(--colorTextoEscuro);
+    text-decoration: none;
+}
+
+.rodape-quemsomos-itens a:hover {
+    color: var(--colorTextoHover);
+}
+
+#logo2 {
+    width: 125px;
+    height: 120px;
+}
+
+.rodape-contato {
+    display: flex;
+    justify-content: center;
+    width: 33.33%;
+    min-width: 333px;
+    padding: 20px;
+    border-right: 1px solid var(--colorBorder);
+}
+
+.rodape-contato h3{
+    padding-bottom: 20px;
+}
+
+.rodape-contato-itens li {
+    padding-bottom: 10px;
+}
+
+.rodape-contato-itens a {
+    color: var(--colorTextoEscuro);
+    text-decoration: none;
+}
+
+.rodape-contato-itens a:hover {
+    color: var(--colorTextoHover);
+}
+
+.rodape-siganos {
+    display: flex;
+    justify-content: center;
+    width: 33.33%;
+    min-width: 333px;
+    padding: 20px;
+}
+
+.rodape-siganos-itens a{
+    font-size: 2em;
+    padding-right: 10px;
+    color: var(--colorTextoEscuro);
+}
+
+.rodape-siganos-itens a:hover {
+    font-size: 2em;
+    color: var(--colorTextoHover);
+}
+
+.copyrigh {
+    background-color: var(--bgColorFormCopy);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.copyrigh-itens {
+    color: var(--colorTextoClaro);
+    font-size: 0.7em;       
+    display: flex; 
+    align-items: center;
+    padding: 5px 10px 5px 10px;
+}
+
+.copyrigh-itens a {
+    color:var(--colorTextoClaro);
+    text-decoration: none;   
+    font-size: 2em;    
+}
+
+.copyrigh-itens:hover a{
+    color: var(--colorTextoHover);
+    font-size: 2em;
+}
+
+/*
+===========================@MEDIA QUERY - RESPONSIVE - FOOTER
+*/
+
+@media (max-width: 1015px) {
+
+    .rodape-contato {
+        border: none;
+    }
+    
+}
+
+@media (max-width: 682px) {
+
+    .rodape-contato {
+        border: none;
+    }
+
+    .rodape-quemsomos {
+        border: none;
+    }
+    
+}
+
+@media (max-width: 700px) {
+        
+    .copyrigh {
+        display: block;
+    }
+    
+    .copyrigh-itens {
+        font-size: 0.6em;
+        padding-top: 5px; 
+    }
+}

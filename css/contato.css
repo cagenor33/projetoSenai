@@ -1,0 +1,116 @@
+/*
+=============================================================================================
+=========================== MAIN - CONTATO
+=============================================================================================
+*/
+/*
+Contato de telefone e email
+*/
+.main-contato {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	width: 100vw;
+}
+.contato-social {
+    color: var(--colorTextoEscuro);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;    
+    width: 100%;
+    padding: 20px;
+}
+
+.contato-social-itens h2 {
+    padding: 0 0 20px 0;
+}
+
+.contato-social-itens p {
+    padding: 0 0 20px 0;
+}
+
+.contato-social-itens li {
+    padding: 0 0 10px 0;
+
+}
+
+.contato-social-itens a {
+    color: var(--colorTextoEscuro);
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+.contato-social-itens a:hover {
+    color: var(--colorTextoHover);
+}
+
+/*
+Formulario de contato
+*/
+
+.contato-email {
+	background-color: var(--bgColorFormCopy);
+	display: flex;
+	justify-content: center;
+	width: 100vw;
+}
+
+.contato-email-itens input{
+    border: 1px solid var(--colorBorder);
+    font-size: 1em;
+    border-radius: 10px;
+    width: 100%;
+    height: 40px;
+    min-width: 400px;
+    padding-left: 10px;
+    margin-top: 10px;
+}
+
+.contato-email-itens label {
+    color: var(--colorTextoClaro);
+}
+
+textarea {
+    border: 1px solid var(--colorBorder);
+    font-size: 1.3em;
+    border-radius: 10px;
+    width: 100%; /*para ele acompanhar o tamanho do pai, o mesmo tem que ter tamanho em vw*/
+    height: 150px;
+    min-width: 360px;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+textarea:focus {
+	outline: none;
+	box-shadow: 0 0 0 2pt var(--bgColorHeader);
+}
+
+#btnContato {
+    background-color: var(--colorTextoClaro);
+    color: var(--colorTextoEscuro);
+    border: none;
+    border-radius: 10px;
+    font-size: 1.5em;
+    width: 450px; /*para ele acompanhar o tamanho do pai, o mesmo tem que ter tamanho em vw*/
+    height: 40px;
+    min-width: 360px;
+}
+
+#btnContato:hover {
+    background-color: var(--colorTextoHover);
+}
+
+.field label {
+    margin-right: 15px;
+}
+
+.sugestao-contato label{
+    margin-right: 15px;
+}
+
+.showMessage {
+    box-shadow: 0 2px 4px 0 var(--colorTextoClaro);
+    background-color: var(--bgColorMain);
+    color: var(--colorTextoHover);
+}
